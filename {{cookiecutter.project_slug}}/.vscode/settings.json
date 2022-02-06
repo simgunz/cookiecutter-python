@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+
+    "python.formatting.provider": "black",
+    // Auto-wrap long strings is a preview feature
+    "python.formatting.blackArgs": [
+        "--preview"
+    ],
+}

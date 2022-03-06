@@ -31,4 +31,4 @@ repos:
         language: system
         entry: poetry run isort --filter-files
         require_serial: true
-        types: [cython, pyi, python]
+        types_or: [python, pyi, cython]

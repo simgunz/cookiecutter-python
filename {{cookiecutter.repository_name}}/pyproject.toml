@@ -1,3 +1,4 @@
+{% if cookiecutter.virtual_environment == "poetry" -%}
 [tool.poetry]
 name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
@@ -22,6 +23,6 @@ bump2version = "^1.0.1"
 [build-system]
 requires = ["poetry>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
+{% endif %}
 [tool.isort]
 profile = "black"

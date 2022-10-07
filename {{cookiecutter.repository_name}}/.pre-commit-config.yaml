@@ -13,7 +13,11 @@ repos:
       - id: flake8
         name: flake8
         language: system
+        {% if cookiecutter.virtual_environment == "poetry" -%}
         entry: poetry run flake8
+        {% elif cookiecutter.virtual_environment == "pipenv" -%}
+        entry: pipenv run flake8
+        {% endif -%}
         require_serial: true
         types: [python]
   - repo: local
@@ -21,7 +25,11 @@ repos:
       - id: black
         name: black
         language: system
+        {% if cookiecutter.virtual_environment == "poetry" -%}
         entry: poetry run black --preview
+        {% elif cookiecutter.virtual_environment == "pipenv" -%}
+        entry: pipenv run black --preview
+        {% endif -%}
         require_serial: true
         types_or: [python, pyi]
   - repo: local
@@ -29,6 +37,10 @@ repos:
       - id: isort
         name: isort
         language: system
+        {% if cookiecutter.virtual_environment == "poetry" -%}
         entry: poetry run isort --filter-files
+        {% elif cookiecutter.virtual_environment == "pipenv" -%}
+        entry: pipenv run isort --filter-files
+        {% endif -%}
         require_serial: true
         types_or: [python, pyi, cython]

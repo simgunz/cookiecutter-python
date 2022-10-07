@@ -32,7 +32,7 @@ WARNING: it is still a work in progress.
    git commit
    ```
 
-3. Generate the poetry lock file
+3. Generate the poetry (or pipenv) lock file
 
    ```bash
    poetry install

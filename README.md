@@ -1,5 +1,7 @@
 # Cookiecutter template for python
 
+This cookiecutter is deprecated, it has evolved to https://github.com/flowtaleai/copier-python-poetry/
+
 My opinionated cookiecutter for python projects.
 
 WARNING: it is still a work in progress.
